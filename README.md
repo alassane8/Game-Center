@@ -19,6 +19,8 @@ As a player, you can place randomly or manually your boat and fire at the IA's b
 
 <img width="1306" alt="Screen Shot 2021-03-15 at 8 29 18 PM" src="https://github.com/alassane8/BattleShip/blob/main/code/Capture.PNG">
 
+https://github.com/alassane8/BattleShip
+
 ## Instructions
 To play the Battleship follow the following instructions :
 
@@ -80,6 +82,8 @@ Sudoku
 Game of Sudoku in C Language.
 
 <img width="1306" alt="Screen Shot 2021-03-15 at 8 29 18 PM" src="https://github.com/alassane8/Sudoku/blob/main/code/Capture.png">
+
+https://github.com/alassane8/Sudoku
 
 ## Instructions
 To play Sudoku, follow the instructions :
