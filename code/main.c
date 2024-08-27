@@ -30,52 +30,61 @@
 #include "boatsascii.h"
 #include "rules.h"
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#include "prototypes.h"
-#include "gotoligcol.h"
-#include "menu.h"
-#include "decorations.h"
-#include "initialization_matrices.h"
-#include "choice_loading_game.h"
-#include "choice_saving_game.h"
-#include "rules.h"
-#include "play.h"
-#include "exitgame.h"
-#include "sudokuascii.h"
-#include "easy.h"
-#include "medium.h"
-#include "hard.h"
 
+
+#include "sudokuascii.h"
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 int main(){
 
-
+    //DDV
+    int k;
+    int t = 0;
+    int i;
+    int z;
     int choix;
+    char pseudo[100];
+    int a = 0;
+    unsigned char ** mat = NULL;
+    unsigned char ** mat_ia1 = NULL;
+    unsigned char ** mat_bis = NULL;
+    unsigned char ** mat_ia1_bis = NULL;
     HANDLE hConsole;
     hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 
     system("cls");
     gotoligcol(0, 30);
-    SetConsoleTextAttribute(hConsole, 11);
+    SetConsoleTextAttribute(hConsole, 12);
     printf("/////////////////////////////////////// ");
     SetConsoleTextAttribute(hConsole, 15);
     printf("G A M E S - C E N T E R");
-    SetConsoleTextAttribute(hConsole, 11);
+    SetConsoleTextAttribute(hConsole, 12);
     printf(" ///////////////////////////////////////\n");
     gotoligcol(3, 30);
     printf("////////////////////////////////// ");
     SetConsoleTextAttribute(hConsole, 15);
     printf("Please, open the game page wide");
-    SetConsoleTextAttribute(hConsole, 11);
+    SetConsoleTextAttribute(hConsole, 12);
     printf(" ////////////////////////////////");
-    SetConsoleTextAttribute(hConsole, 15);
 
     gotoligcol(44, 70);
-    printf("Copyright 2023 Battleship Alassane Wade");
+    printf("Copyright 2024 Games-Center Alassane Wade");
 
-    boat_decoration_menu();
+    boats_decoration_exit();
+    sudokumain();
 
+    gotoligcol(5, 70);
+    SetConsoleTextAttribute(hConsole, 12);
+    printf("Enter your nickname: ");
+    SetConsoleTextAttribute(hConsole, 15);
+    gets(pseudo);
+    gotoligcol(6, 70);
+    printf("Welcome %s !\n\n", pseudo);
+
+    gotoligcol(9, 70);
+    SetConsoleTextAttribute(hConsole, 12);
+    printf("Choose the game you want to play:");
+    SetConsoleTextAttribute(hConsole, 15);
     gotoligcol(10, 70);
     printf("1. Battleship");
     gotoligcol(11, 70);
@@ -99,6 +108,68 @@ int main(){
     }
 
     // Battleship 
-    if (choix == 1)
-    {
+    if (choix == 1){
+        system("cls");
+        gotoligcol(0, 30);
+        SetConsoleTextAttribute(hConsole, 11);
+        printf("/////////////////////////////////////// ");
+        SetConsoleTextAttribute(hConsole, 15);
+        printf("B A T T L E S H I P");
+        SetConsoleTextAttribute(hConsole, 11);
+        printf(" ///////////////////////////////////////\n");
+        gotoligcol(3, 30);
+        printf("////////////////////////////////// ");
+        SetConsoleTextAttribute(hConsole, 15);
+        printf("Please, open the game page wide");
+        SetConsoleTextAttribute(hConsole, 11);
+        printf(" ////////////////////////////////");
+        SetConsoleTextAttribute(hConsole, 15);
+
+
+        //3. Saisie du pseudo de l'utilisateur
+        gotoligcol(44, 70);
+        printf("Copyright 2023 Battleship Alassane Wade");
+
+        boat_decoration_main();
+
+        gotoligcol(30, 70);
+        printf("Loading...");
+        sleep(3);
+        system("cls");
+
+        //Création de l'échiquier
+
+        //Création de la ligne [1][j]
+        mat = (unsigned char **)malloc(16* sizeof(unsigned char*));
+
+        //Création des colonnesala
+        for ( k = 0; k < 16; k++) {
+            mat[k] = (unsigned char *)malloc(16 * sizeof(unsigned char));
+        }
+        //Création de la ligne [1][j]
+        mat_ia1 = (unsigned char **)malloc(16* sizeof(unsigned char*));
+
+        //Création des colonnes
+        for ( k = 0; k < 16; k++) {
+            mat_ia1[k] = (unsigned char *)malloc(16 * sizeof(unsigned char));
+        }
+        //Création de la ligne [1][j]
+        mat_bis = (unsigned char **)malloc(16* sizeof(unsigned char*));
+
+        //Création des colonnes
+        for ( k = 0; k < 16; k++) {
+            mat_bis[k] = (unsigned char *)malloc(16 * sizeof(unsigned char));
+        }
+        //Création de la ligne [1][j]
+        mat_ia1_bis = (unsigned char **)malloc(16* sizeof(unsigned char*));
+
+        //Création des colonnes
+        for ( k = 0; k < 16; k++) {
+            mat_ia1_bis[k] = (unsigned char *)malloc(16 * sizeof(unsigned char));
+        }
+
+        //Appel du Menu Principale
+        menu(mat,mat_ia1, &a, pseudo, choix, mat_bis,mat_ia1_bis);
+    }
 }
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
