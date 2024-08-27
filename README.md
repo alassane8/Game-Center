@@ -69,9 +69,8 @@ Aircraft Carrier, Cruiser, Destroyer and Submarine.
 - 3 Destroyers with the letter D take 3 spaces.
 - 4 Submarines with the letter S take up 1 space.
 
-## Area for improvement
-Here, you can find the features I am currently working on in this repository.
-This allows you to be aware of the changes that are to come and see what needs to be improve. 
+
+
 
 
 <h2 align="center">
