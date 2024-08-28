@@ -9,6 +9,26 @@ Alassane WADE Game-Center
 
 Game-Center in C Language.
 
+## Instructions
+To play the different games in the Games-Center, follow the instructions :
+
+## Open a terminal in full screen.
+- Clone this github repository in the path of your choice: 
+```bash
+git clone https://github.com/alassane8/Games-Center.git
+```
+- Go to the Sudoku folder :
+```bash
+cd Games-Center/code
+```
+- Run the Executable: 
+```bash
+./Games-Center.exe
+```
+
+## Have fun !
+You are now ready to play !
+
 <h2 align="center">
 Battleship
 </h2>  
@@ -20,26 +40,6 @@ As a player, you can place randomly or manually your boat and fire at the IA's b
 <img width="1306" alt="Screen Shot 2021-03-15 at 8 29 18 PM" src="https://github.com/alassane8/BattleShip/blob/main/code/Capture.PNG">
 
 https://github.com/alassane8/BattleShip
-
-## Instructions
-To play the Battleship follow the following instructions :
-
-## Open a terminal in full screen.
-- Clone this github repository in the path of your choice: 
-```bash
-git clone https://github.com/alassane8/BattleShip.git
-```
-- Go to the BattleShip folder :
-```bash
-cd BattleShip/code
-```
-- Run the Executable: 
-```bash
-./BattleshipColor.exe
-```
-
-## Have fun !
-You are now ready to play !
 
 ## Rules
 Here are the rules of the game: 
@@ -71,10 +71,6 @@ Aircraft Carrier, Cruiser, Destroyer and Submarine.
 - 3 Destroyers with the letter D take 3 spaces.
 - 4 Submarines with the letter S take up 1 space.
 
-
-
-
-
 <h2 align="center">
 Sudoku
 </h2>                                      
@@ -84,26 +80,6 @@ Game of Sudoku in C Language.
 <img width="1306" alt="Screen Shot 2021-03-15 at 8 29 18 PM" src="https://github.com/alassane8/Sudoku/blob/main/code/Capture.png">
 
 https://github.com/alassane8/Sudoku
-
-## Instructions
-To play Sudoku, follow the instructions :
-
-## Open a terminal in full screen.
-- Clone this github repository in the path of your choice: 
-```bash
-git clone https://github.com/alassane8/Sudoko.git
-```
-- Go to the Sudoku folder :
-```bash
-cd Sudoku/code
-```
-- Run the Executable: 
-```bash
-./Sudoku.exe
-```
-
-## Have fun !
-You are now ready to play !
 
 ## Rules
 - Rule 1 - The player must focus on filling each row of the grid while ensuring there are
