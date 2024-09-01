@@ -15,11 +15,11 @@ To play the different games in the Games-Center, follow the instructions :
 ## Open a terminal in full screen.
 - Clone this github repository in the path of your choice: 
 ```bash
-git clone https://github.com/alassane8/Games-Center.git
+git clone https://github.com/alassane8/Game-Center.git
 ```
 - Go to the Sudoku folder :
 ```bash
-cd Games-Center/code
+cd Game-Center/code
 ```
 - Run the Executable: 
 ```bash
