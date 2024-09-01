@@ -29,9 +29,9 @@ cd Games-Center/code
 ## Have fun !
 You are now ready to play !
 
-<h2 align="center">
+<h1 align="center">
 Battleship
-</h2>  
+</h1>  
 
 Game of Battleship in C Language.
 
@@ -69,9 +69,9 @@ Aircraft Carrier, Cruiser, Destroyer and Submarine.
 - 3 Destroyers with the letter D take 3 spaces.
 - 4 Submarines with the letter S take up 1 space.
 
-<h2 align="center">
+<h1 align="center">
 Sudoku
-</h2>                                      
+</h1>                                      
 
 Game of Sudoku in C Language.
 
