@@ -17,13 +17,13 @@ To play the different games in the Games-Center, follow the instructions :
 ```bash
 git clone https://github.com/alassane8/Game-Center.git
 ```
-- Go to the Sudoku folder :
+- Go to the Game-Center folder :
 ```bash
 cd Game-Center/code
 ```
 - Run the Executable: 
 ```bash
-./Games-Center.exe
+./Game-Center.exe
 ```
 
 ## Have fun !
