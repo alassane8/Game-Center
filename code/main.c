@@ -70,8 +70,8 @@ int main(){
     gotoligcol(44, 70);
     printf("Copyright 2024 Games-Center Alassane Wade");
 
-    boats_decoration_exit();
-    sudokumain();
+    // boats_decoration_exit();
+    // sudokumain();
 
     gotoligcol(5, 70);
     SetConsoleTextAttribute(hConsole, 12);
