@@ -32,6 +32,16 @@
 
 
 
+#include "rules1.h"
+#include "menu1.h"
+#include "play1.h"
+#include "choice_loading_game1.h"
+#include "choice_saving_game.h"
+#include "initialization_matrices1.h"
+#include "decorations1.h"
+#include "easy.h"
+#include "medium.h"
+#include "hard.h"
 #include "sudokuascii.h"
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -49,6 +59,8 @@ int main(){
     unsigned char ** mat_ia1 = NULL;
     unsigned char ** mat_bis = NULL;
     unsigned char ** mat_ia1_bis = NULL;
+    unsigned char ** mat2 = NULL;
+    unsigned char ** mat2_bis = NULL;
     HANDLE hConsole;
     hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 
@@ -170,6 +182,63 @@ int main(){
 
         //Appel du Menu Principale
         menu(mat,mat_ia1, &a, pseudo, choix, mat_bis,mat_ia1_bis);
+    }
+        // Sudoku
+    if (choix == 1){
+        
+    //Sudoku
+    system("cls");
+    gotoligcol(0, 30);
+    SetConsoleTextAttribute(hConsole, 6);
+    printf("/////////////////////////////////////// ");
+    SetConsoleTextAttribute(hConsole, 15);
+    printf("S U D O K U");
+    SetConsoleTextAttribute(hConsole, 6);
+    printf(" ///////////////////////////////////////\n");
+    gotoligcol(3, 30);
+    printf("////////////////////////////// ");
+    SetConsoleTextAttribute(hConsole, 15);
+    printf("Please, open the game page wide");
+    SetConsoleTextAttribute(hConsole, 6);
+    printf(" ////////////////////////////");
+    SetConsoleTextAttribute(hConsole, 15);
+    
+    //Copyrights
+    SetConsoleTextAttribute(hConsole, 6);
+    gotoligcol(34, 70);
+    printf("Copyright 2024 Sudoku Alassane Wade");
+    SetConsoleTextAttribute(hConsole, 15);
+
+    // Pseudo input 
+    gotoligcol(5, 70);
+    SetConsoleTextAttribute(hConsole, 6);
+    printf("Enter your pseudo: ");
+    SetConsoleTextAttribute(hConsole, 15);
+    gets(pseudo);
+    gotoligcol(6, 70);
+    gotoligcol(6, 70);
+    printf("Welcome %s !\n\n", pseudo);
+
+    sudokumain();
+
+    gotoligcol(30, 70);
+    printf("Loading...");
+    sleep(3);
+    system("cls");
+
+    //Création de la ligne [1][j]
+    mat2 = (unsigned char **)malloc(10 * sizeof(unsigned char*));
+
+    //Création de la ligne [1][j]
+    mat2_bis = (unsigned char **)malloc(10 * sizeof(unsigned char*));
+
+    for (i = 0; i < 10; i++) {
+        mat2[i] = (unsigned char *)malloc(10 * sizeof(unsigned char));
+        mat2_bis[i] = (unsigned char *)malloc(10 * sizeof(unsigned char));
+    }
+
+    //Calling menu
+    menu1(mat2, mat2_bis, pseudo);s
     }
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

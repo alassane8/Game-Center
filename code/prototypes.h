@@ -71,9 +71,28 @@ int destroyers3(char destroyers3);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+void menu1(unsigned char ** mat, unsigned char ** mat_bis, char *pseudo);
+
+void rules1(unsigned char ** mat, unsigned char ** mat_bis, char *pseudo);
+
+void initialisation_matrice1(unsigned char ** mat, unsigned char ** mat_ia1);
+
+void decors2(unsigned char ** mat);
+
+void play1(unsigned char **mat, unsigned char **mat_bis,  char *pseudo);
+
 void sudokumain();
 void sudokuascii();
 void sudokuload();
+
+void choice_loading_game1(unsigned char ** mat, unsigned char ** mat_bis, char *pseudo);
+void choice_saving_game(unsigned char ** mat, unsigned char ** mat_bis, char *pseudo);
+
+void exitgame(unsigned char ** mat, unsigned char ** mat_bis, char *pseudo);
+
+void easy(unsigned char ** mat, unsigned char ** mat_bis, char *pseudo);
+void medium(unsigned char ** mat, unsigned char ** mat_bis, char *pseudo);
+void hard(unsigned char ** mat, unsigned char ** mat_bis, char *pseudo);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #endif
